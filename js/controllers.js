@@ -1,6 +1,10 @@
 angular.module('app.controllers', [])
   
-.controller('pesquisaDeLivrosCtrl', function($scope) {
+.controller('pesquisaDeLivrosCtrl', function($scope, bookService) {
+	bookService.getBooks().then(function(books){
+		// books é umarray de objetos livros
+		
+	});
 
 })
    
