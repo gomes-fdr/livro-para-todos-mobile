@@ -1,25 +1,16 @@
 <ion-view title="Resultado pesquisa" id="page5">
-    <ion-content padding="true" class="has-header">
-        <ion-list>
-            <ion-item class="item-thumbnail-left" ui-sref="menu.detalhesDoLivro">
+    <ion-content padding="true" class="has-header" >
+        <ion-list ng-init="pesquisaLivro()">
+<!--             <ion-item class="item-thumbnail-left" ui-sref="menu.detalhesDoLivro">
                 <img>
                 <h2>Title</h2>
                 <p>Item</p>
-            </ion-item>
-            <ion-item class="item-thumbnail-left">
+            </ion-item> -->
+            <ion-item ng-repeat="livro in listaLivros.books" class="item-thumbnail-left | filter:titulo_filtro" >
                 <img>
-                <h2>Title</h2>
-                <p>Item</p>
-            </ion-item>
-            <ion-item class="item-thumbnail-left">
-                <img>
-                <h2>Title</h2>
-                <p>Item</p>
-            </ion-item>
-            <ion-item class="item-thumbnail-left">
-                <img>
-                <h2>Title</h2>
-                <p>Item</p>
+                <h2>{{livro.title}}</h2>
+                <p>Autor: {{livro.author}}</p>
+                <p>ISBN: {{livro.isbn}}</p>
             </ion-item>
         </ion-list>
     </ion-content>

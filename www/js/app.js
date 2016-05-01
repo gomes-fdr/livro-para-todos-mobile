@@ -1,5 +1,10 @@
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
 
+.controller('app.controllers', ['$scope', function($scope) {
+
+}])
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
